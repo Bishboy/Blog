@@ -8,8 +8,8 @@
     @apply text-orange-500 underline underline-offset-4
  }
  .activePagination{
-    @apply bg-orange-500 text-white py-2 rounded-md  
+    @apply bg-orange-500 text-white  rounded-md  
  }
- .pagination{
-   
+ .activeButton{
+    @apply text-orange-500 
  }
