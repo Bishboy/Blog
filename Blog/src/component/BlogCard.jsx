@@ -14,12 +14,12 @@ const BlogCard = ({ blogs, currentPage, selectedCategory, pageSize }) => {
   const paginatedBlogs = filteredBlogs.slice(startIndex, endIndex);
 
   return (
-    <div className="grid md:grid-cols-3 mt-5 sm:grid-cols-2 grid-cols-1  gap-8">
+    <div className="grid md:grid-cols-3  mt-5 sm:grid-cols-2 grid-cols-1 gap-8">
       {paginatedBlogs.map((blog) => (
         <Link
-          // to={`/blog/${blog.id}`}
+          to={`/blog/${blog.id}`}
           key={blog.id}
-          className="p-5 shadow-lg  lg:max-h-[27rem]  cursor-pointer rounded"
+          className="p-5 shadow-lg  lg:max-h-[27rem] cursor-pointer rounded"
         >
           <div>
             <img

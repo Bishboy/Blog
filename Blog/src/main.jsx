@@ -9,7 +9,11 @@ import About from "./page/About.jsx";
 import Services from "./page/Services.jsx";
 import Contact from "./page/Contact.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import SingleBlog from "./component/SingleBlog.jsx";
 // import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+const URL = "http://localhost:5000/blogs";
+// const URL = "https://blog-dyxu.vercel.app/blogs"
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -48,6 +52,11 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
+      {
+        path: "/blog/:id",
+        element: <SingleBlog />,
+        loader: ({ params }) => fetch(`${URL}/${params.id}`)
+      }
     ],
   },
 ]);
