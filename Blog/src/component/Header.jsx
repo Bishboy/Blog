@@ -7,9 +7,11 @@ import {
   FaBars,
   FaXmark,
 } from "react-icons/fa6";
+import Modal from "./Modal";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -18,10 +20,18 @@ const Header = () => {
   const navItems = [
     { id: 1, path: "/", link: "Home" },
     { id: 2, path: "/blog", link: "Blog" },
-    { id: 3, path: "/about", link: "About" },
-    { id: 4, path: "/services", link: "Services" },
-    { id: 5, path: "/contact", link: "Contact" },
+    // { id: 3, path: "/about", link: "About" },
+    // { id: 4, path: "/services", link: "Services" },
+    // { id: 5, path: "/contact", link: "Contact" },
   ];
+
+   const openModal = () => {
+     setIsModalOpen(true);
+   }; 
+
+   const closeModal = () => {
+     setIsModalOpen(false);
+   };
 
   return (
     <header className="bg-black text-white fixed top-0 left-0 right-0">
@@ -55,10 +65,14 @@ const Header = () => {
           <a href="/" className="hover:text-orange-500">
             <FaXTwitter className="" size={20} />
           </a>
-          <button className="bg-orange-500 hover:text-orange-500 px-6 py-2 font-medium rounded hover:bg-white dfdfj-all duration-200 ease-in">
+          <button
+            onClick={openModal}
+            className="bg-orange-500 hover:text-orange-500 px-6 py-2 font-medium rounded hover:bg-white dfdfj-all duration-200 ease-in"
+          >
             Log in
           </button>
         </div>
+        <Modal isModalOpen={isModalOpen} closeModal={closeModal} />
 
         {/* mobile nav */}
         <div className="lg:hidden ">

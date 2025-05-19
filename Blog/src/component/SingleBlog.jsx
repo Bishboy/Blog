@@ -16,7 +16,7 @@ const SingleBlog = () => {
           Single Blog PAge
         </h1>
       </div>
-      <div className="max-w-7xl mx-auto my-12 flex flex-col md:flex-row gap-12ls">
+      <div className="max-w-7xl mx-auto my-12 flex flex-col md:flex-row gap-12  ">
         <div className="lg:w-3/5 mx-auto">
           <div>
             <img src={image} alt="" className="w-full mx-auto rounded" />

@@ -12,7 +12,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import SingleBlog from "./component/SingleBlog.jsx";
 // import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-const URL = "http://localhost:5000/blogs";
+const URL = import.meta.env.VITE_BASE_URL;
 // const URL = "https://blog-dyxu.vercel.app/blogs"
 
 const queryClient = new QueryClient({
