@@ -3,12 +3,12 @@ import { FaUser } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const BlogCard = ({ blogs, currentPage, selectedCategory, pageSize }) => {
-  // Filter blogs by category if selectedCategory is provided
+  
   const filteredBlogs = selectedCategory
     ? blogs.filter((blog) => blog.category === selectedCategory)
     : blogs;
 
-  // Calculate pagination slice
+   
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
   const paginatedBlogs = filteredBlogs.slice(startIndex, endIndex);
@@ -38,13 +38,7 @@ const BlogCard = ({ blogs, currentPage, selectedCategory, pageSize }) => {
           <p className="text-sm text-gray-500">
             Published on {blog.published_date} • {blog.reading_time}
           </p>
-          {/* <div className="mt-2 flex flex-wrap gap-2">
-            {blog.tags?.map((tag) => (
-              <span key={tag} className="text-xs bg-gray-100 px-2 py-1 rounded">
-                {tag}
-              </span>
-            ))}
-          </div> */}
+          
         </Link>
       ))}
     </div>

@@ -16,7 +16,7 @@ const BlogPage = () => {
   const fetchBlogs = async ({ queryKey }) => {
     const [_, page, category] = queryKey;
     let url = `https://blogbackend-l8un.onrender.com/blogs?page=${page}&limit=${pageSize}`;
-    // const url = `https://blog-dyxu.vercel.app/blogs?page=${page}&limit=${pageSize}`;
+    
 
     if (category) {
       url += `&category=${category}`;

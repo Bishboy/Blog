@@ -38,7 +38,7 @@ const Header = () => {
       <nav className="px-4  py-4 flex justify-between items-center b max-w-7xl mx-auto  ">
         <a href="/" className="text-xl text-white font-bold px-6">
           {" "}
-          Design<span className="text-orange-500">DK</span>
+          Whistle<span className="text-orange-500">BH</span>
         </a>
         {/*navitems*/}
         <ul className="lg:flex gap-12 text-lg hidden">

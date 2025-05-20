@@ -6,6 +6,7 @@ const Pagination = ({
   pageSize,
   handlePageChange,
 }) => {
+  
   const totalPages = Math.ceil(totalItems / pageSize);
 
   const renderPaginationLinks = () => {
