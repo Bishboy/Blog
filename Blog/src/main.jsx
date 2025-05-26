@@ -10,15 +10,15 @@ import Services from "./page/Services.jsx";
 import Contact from "./page/Contact.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import SingleBlog from "./component/SingleBlog.jsx";
-// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+ 
 
 const URL = import.meta.env.VITE_BASE_URL;
-// const URL = "https://blog-dyxu.vercel.app/blogs"
+ 
 
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 1000 * 60 * 5, // 5 minutes cache
+      staleTime: 1000 * 60 * 5, 
     },
   },
 });

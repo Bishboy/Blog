@@ -13,16 +13,16 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+ 
   const toggle = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    setIsMenuOpen(!isMenuOpen)
+  }
+
 
   const navItems = [
     { id: 1, path: "/", link: "Home" },
     { id: 2, path: "/blog", link: "Blog" },
-    // { id: 3, path: "/about", link: "About" },
-    // { id: 4, path: "/services", link: "Services" },
-    // { id: 5, path: "/contact", link: "Contact" },
+    
   ];
 
    const openModal = () => {
@@ -45,8 +45,8 @@ const Header = () => {
           {navItems.map(({ path, id, link }) => (
             <li key={id}>
               <NavLink
-                className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "active" : ""
+                className={({ isActive }) =>
+                  isActive ? "active" : ""
                 }
                 to={path}
               >
