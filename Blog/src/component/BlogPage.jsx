@@ -16,6 +16,7 @@ const BlogPage = () => {
   const fetchBlogs = async ({ queryKey }) => {
     const [_, page, category] = queryKey;
     let url = `https://blogbackend-l8un.onrender.com/blogs?page=${page}&limit=${pageSize}`;
+    // let url = `${import.meta.env.VITE_BASE_URL}/blogs?page=${page}&limit=${pageSize}`;
     
 
     if (category) {

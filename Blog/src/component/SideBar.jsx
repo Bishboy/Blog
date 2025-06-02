@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 
 const SideBar = () => {
     const [popularBlogs, setPopularBlogs] = useState([]);
-    let url = `http://localhost:5000/blogs`;
+  
+    let url = `https://blogbackend-l8un.onrender.com/blogs`;
+    // let url = `${import.meta.env.VITE_BASE_URL}/blogs`;
 
     useEffect(()=>{
         fetch(url)
