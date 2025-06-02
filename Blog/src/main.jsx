@@ -12,7 +12,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import SingleBlog from "./component/SingleBlog.jsx";
  
 
-const URL = import.meta.env.VITE_BASE_URL;
+const URL = `https://blogbackend-l8un.onrender.com/blogs`;
+// const URL = `${import.meta.env.VITE_API_URL}/blogs`
  
 
 const queryClient = new QueryClient({
